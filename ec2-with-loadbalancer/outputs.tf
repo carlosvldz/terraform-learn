@@ -3,7 +3,7 @@ output "public_dns_server_1" {
   value = "http://${aws_instance.server_1.public_dns}:8080"
 }
 
-output "dns_publica" {
+output "public_dns_server_2" {
   description = "Server public DNS"  
   value = "http://${aws_instance.server_2.public_dns}:8080"
 }
