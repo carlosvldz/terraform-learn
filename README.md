@@ -23,3 +23,5 @@ terraform destroy
 [Basic Server with EC2 Instance](./basic-server-with-ec2/)
 
 [Basic Server with EC2 Instance and Application Load Balancer](./ec2-with-loadbalancer/)
+
+[Basic Server with EC2 Instance and Application Load Balancer (using variables, maps and validations)](./infra-reutilizable/)
