@@ -15,7 +15,7 @@ data "aws_subnet" "az_d" {
 
 # Define the first EC2 instance with Ubuntu AMI
 resource "aws_instance" "server_1" {
-  ami = "ami-08d4ac5b634553e16"
+  ami = var.ubuntu_ami["us-east-1"]
   instance_type = var.instance_type
   subnet_id = data.aws_subnet.az_b.id
   vpc_security_group_ids = [aws_security_group.mi_grupo_de_seguridad.id]
@@ -33,7 +33,7 @@ resource "aws_instance" "server_1" {
 
 # Define the second EC2 instance with Ubuntu AMI
 resource "aws_instance" "server_2" {
-  ami = "ami-08d4ac5b634553e16"
+  ami = var.ubuntu_ami["us-east-1"]
   instance_type = var.instance_type
   subnet_id = data.aws_subnet.az_d.id
   vpc_security_group_ids = [aws_security_group.mi_grupo_de_seguridad.id]
